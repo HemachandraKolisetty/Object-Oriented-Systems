@@ -1,0 +1,5 @@
+Chole Bhature,,Chole::Wheat::Tomato::,,Fry wheat rolls.::Smash Tomato.::Mix them.::
+Paneer Butter Masala,,Paneer::Butter::Tomato::Grean Peas::,,Smash tomato.::Mix with paneer, and butter.::Cook for 15 mins.::
+Roti,,Wheat::Ghee::,,Make wheat balls.::Heat.::Apply Ghee.::
+Dal Makhani,,Dal::Makhani::,,Put Dal in water.::Add curry in a pan.::Heat for 15 mins.::
+Naan,,Wheat::Furnace::Maida::,,Roll and Heat::
