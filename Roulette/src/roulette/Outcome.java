@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author user
  */
-public class Outcome {
+public class Outcome implements Comparable<Outcome>{
     public String name;
     public int odds;
     
@@ -61,5 +61,15 @@ public class Outcome {
         result = new StringBuilder();
         result.append(name).append(" (").append(odds).append(":1)");
         return result.toString();
+    }
+    
+    /**
+     *
+     * @param o
+     * @return
+     */
+    @Override
+    public int compareTo(Outcome o){
+        return this.name.compareTo(o.name);
     }
 }
