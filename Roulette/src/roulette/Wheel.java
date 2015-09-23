@@ -13,6 +13,10 @@ public class Wheel {
     public ArrayList<Bin> bins;
     public Random rng;
     
+    /**
+     *
+     * @param rng
+     */
     public Wheel(Random rng){
         bins = new ArrayList<>();
         for(int i=0;i<38;i++){
