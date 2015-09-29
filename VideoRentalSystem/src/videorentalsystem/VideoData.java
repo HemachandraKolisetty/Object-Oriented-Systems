@@ -117,7 +117,7 @@ public class VideoData {
             System.err.println("Error: " + e.getMessage());
         }
     }
-    public void removeCost(String videoName){
+    public void removeVideo(String videoName){
         try {
             // Open the file that is the first
             // command line parameter
