@@ -1,0 +1,4 @@
+<map id="iikh.MealManager" name="iikh.MealManager">
+<area shape="rect" id="node3" href="$classiikh_1_1MealData.html" title="{iikh.MealData\n|~ mealName\l|+ addMeal()\l+ mealNames()\l+ getMeal()\l+ editMeal()\l+ removeMeal()\l+ getRecipes()\l}" alt="" coords="97,147,209,298"/>
+<area shape="rect" id="node5" href="$classiikh_1_1PlanData.html" title="{iikh.PlanData\n|~ planName\l|+ addPlan()\l+ planNames()\l+ getPlan()\l+ editPlan()\l+ removePlan()\l+ getPlans()\l}" alt="" coords="234,147,344,298"/>
+</map>
