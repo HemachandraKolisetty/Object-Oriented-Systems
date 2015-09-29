@@ -1,0 +1,4 @@
+<map id="videorentalsystem.RentVideo" name="videorentalsystem.RentVideo">
+<area shape="rect" id="node3" href="$classvideorentalsystem_1_1CostData.html" title="{videorentalsystem.CostData\n|~ costName\l~ address\l~ phoneNo\l~ DOB\l|+ addCost()\l+ costNames()\l+ getCost()\l+ editCost()\l+ removeCost()\l}" alt="" coords="97,147,284,327"/>
+<area shape="rect" id="node5" href="$classvideorentalsystem_1_1VideoData.html" title="{videorentalsystem.VideoData\n|~ videoName\l~ rating\l~ duration\l|+ addVideo()\l+ videoNames()\l+ getVideo()\l+ editVideo()\l+ removeVideo()\l}" alt="" coords="309,155,501,320"/>
+</map>

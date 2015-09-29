@@ -1,0 +1,3 @@
+<map id="videorentalsystem.VideoForm" name="videorentalsystem.VideoForm">
+<area shape="rect" id="node3" href="$classvideorentalsystem_1_1VideoData.html" title="{videorentalsystem.VideoData\n|~ videoName\l~ rating\l~ duration\l|+ addVideo()\l+ videoNames()\l+ getVideo()\l+ editVideo()\l+ removeVideo()\l}" alt="" coords="177,147,369,312"/>
+</map>

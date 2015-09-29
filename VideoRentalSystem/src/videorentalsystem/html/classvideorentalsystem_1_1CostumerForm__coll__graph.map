@@ -1,0 +1,3 @@
+<map id="videorentalsystem.CostumerForm" name="videorentalsystem.CostumerForm">
+<area shape="rect" id="node3" href="$classvideorentalsystem_1_1CostData.html" title="{videorentalsystem.CostData\n|~ costName\l~ address\l~ phoneNo\l~ DOB\l|+ addCost()\l+ costNames()\l+ getCost()\l+ editCost()\l+ removeCost()\l}" alt="" coords="125,147,312,327"/>
+</map>
