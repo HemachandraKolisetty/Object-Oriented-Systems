@@ -22,6 +22,7 @@ public class Wheel {
         for(int i=0;i<38;i++){
             bins.add(new Bin());
         }
+        this.rng = rng;
     }
     
     public void addOutcome(int binno, Outcome outc){
