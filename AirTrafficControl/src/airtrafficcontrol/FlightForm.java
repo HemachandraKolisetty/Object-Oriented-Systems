@@ -76,23 +76,13 @@ public class FlightForm extends javax.swing.JFrame {
 
         jLabel2.setText("Name");
 
-        cname.setText("jTextField1");
-
         jLabel3.setText("Source");
-
-        csource.setText("jTextField1");
 
         jLabel4.setText("Destination");
 
-        cdestination.setText("jTextField1");
-
         jLabel5.setText("Time of Departure");
 
-        ctimedepart.setText("jTextField1");
-
         jLabel6.setText("Duration of Flight");
-
-        cduration.setText("jTextField1");
 
         Add.setText("Add");
         Add.addActionListener(new java.awt.event.ActionListener() {
@@ -131,8 +121,6 @@ public class FlightForm extends javax.swing.JFrame {
 
         jLabel7.setText("Flight Status");
 
-        cstatus.setText("jTextField1");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -164,17 +152,15 @@ public class FlightForm extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(cduration))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addGap(53, 53, 53)
-                                        .addComponent(cstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(71, 71, 71)
-                                        .addComponent(ListFlight, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ViewFlight)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(71, 71, 71)
+                                .addComponent(ListFlight, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(ViewFlight)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(53, 53, 53)
+                                .addComponent(cstatus)))))
                 .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
                 .addGap(51, 51, 51)
@@ -249,6 +235,7 @@ public class FlightForm extends javax.swing.JFrame {
         cdestination.setText("");
         ctimedepart.setText("");
         cduration.setText("");
+        cstatus.setText("");
     }//GEN-LAST:event_ClearActionPerformed
 
     private void ViewFlightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewFlightActionPerformed
@@ -259,23 +246,25 @@ public class FlightForm extends javax.swing.JFrame {
         cdestination.setText(db.dest);
         ctimedepart.setText(db.timeOfDeparture);
         cduration.setText(db.timeDuration);
+        cstatus.setText(db.status);
         cname.setText(rep);
     }//GEN-LAST:event_ViewFlightActionPerformed
 
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
         // TODO add your handling code here:
-        if(csource.getText().equals("") || cdestination.getText().equals("") || ctimedepart.getText().equals("") || cduration.getText().equals("")){
+        if(csource.getText().equals("") || cdestination.getText().equals("") || ctimedepart.getText().equals("") || cduration.getText().equals("") || cstatus.getText().equals("")){
             JOptionPane.showMessageDialog (jOptionPane1, "Enter valid values");
         }
         else{
             JOptionPane.showMessageDialog(jOptionPane1, "Flight has been added");
-            db.addFlight(cname.getText(), csource.getText(), cdestination.getText(), ctimedepart.getText(), cduration.getText());
+            db.addFlight(cname.getText(), csource.getText(), cdestination.getText(), ctimedepart.getText(), cduration.getText(), cstatus.getText());
 
             cname.setText("");
             csource.setText("");
             cdestination.setText("");
             ctimedepart.setText("");
             cduration.setText("");
+            cstatus.setText("");
             
             ArrayList<String> arr = db.flightNames();
             ListFlight.removeAllItems();
@@ -286,12 +275,12 @@ public class FlightForm extends javax.swing.JFrame {
 
     private void EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditActionPerformed
         // TODO add your handling code here:
-        if(csource.getText().equals("") || cdestination.getText().equals("") || ctimedepart.getText().equals("") || cduration.getText().equals("")){
+        if(csource.getText().equals("") || cdestination.getText().equals("") || ctimedepart.getText().equals("") || cduration.getText().equals("")  || cstatus.getText().equals("")){
             JOptionPane.showMessageDialog (jOptionPane1, "Enter valid values");
         }
         else{
-            JOptionPane.showMessageDialog(jOptionPane1, "Flight has been added");
-            db.editFlight(ListFlight.getSelectedItem().toString(), cname.getText(), csource.getText(), cdestination.getText(), ctimedepart.getText(), cduration.getText());
+            JOptionPane.showMessageDialog(jOptionPane1, "Flight has been edited");
+            db.editFlight(ListFlight.getSelectedItem().toString(), cname.getText(), csource.getText(), cdestination.getText(), ctimedepart.getText(), cduration.getText(), cstatus.getText());
             ArrayList<String> arr = db.flightNames();
             ListFlight.removeAllItems();
             for(String x: arr)
@@ -313,6 +302,7 @@ public class FlightForm extends javax.swing.JFrame {
         cdestination.setText("");
         ctimedepart.setText("");
         cduration.setText("");
+        cstatus.setText("");
     }//GEN-LAST:event_DeleteActionPerformed
     /**
      * @param args the command line arguments

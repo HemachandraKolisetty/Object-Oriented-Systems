@@ -29,20 +29,22 @@ public class FlightData{
     String dest;
     String timeOfDeparture;
     String timeDuration;
+    String status;
     ArrayList<String> flights;
     
-    private String parsetoString(String flightName, String source, String dest, String timeOfDeparture, String timeDuration){
+    private String parsetoString(String flightName, String source, String dest, String timeOfDeparture, String timeDuration, String status){
         String out = flightName + ",,";
         out += (source + ",,");
         out += (dest + ",,");
         out += (timeOfDeparture + ",,");
         out += (timeDuration + ",,");
+        out += (status + ",,");
       //  System.out.print( out + "vsd");
         return out;
     }
-    public void addFlight(String flightName, String source, String dest, String timeOfDeparture, String timeDuration){
+    public void addFlight(String flightName, String source, String dest, String timeOfDeparture, String timeDuration, String status){
         try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("flightList.txt", true)))) {
-            out.println(parsetoString(flightName, source, dest, timeOfDeparture, timeDuration));  
+            out.println(parsetoString(flightName, source, dest, timeOfDeparture, timeDuration, status));  
        //     System.out.print("ksadlvbw");
         }catch (IOException e) {
             e.printStackTrace();
@@ -72,6 +74,7 @@ public class FlightData{
         this.dest = null;
         this.timeOfDeparture = null;
         this.timeDuration = null;
+        this.status = null;
     	try {
             String line;
             br = new BufferedReader(new FileReader("flightList.txt"));
@@ -83,13 +86,14 @@ public class FlightData{
                     this.dest = x[2];
                     this.timeOfDeparture = x[3];
                     this.timeDuration = x[4];
+                    this.status = x[5];
                 }
             }
     	} catch (IOException e) {
                 e.printStackTrace();
             }
         }
-    public void editFlight(String oldflightName, String newflightName, String source, String dest, String timeOfDeparture, String timeDuration){
+    public void editFlight(String oldflightName, String newflightName, String source, String dest, String timeOfDeparture, String timeDuration, String status){
         try {
             // Open the file that is the first
             // command line parameter
@@ -106,7 +110,7 @@ public class FlightData{
                     // Here tokens[0] will have value of ID
                     if (tokens[0].equals(oldflightName)) {  
                         //System.out.print("here");
-                        String newLine = parsetoString(newflightName, source, dest, timeOfDeparture, timeDuration);
+                        String newLine = parsetoString(newflightName, source, dest, timeOfDeparture, timeDuration, status);
                         fileContent.append(newLine);
                         fileContent.append("\n");
                     } else {
