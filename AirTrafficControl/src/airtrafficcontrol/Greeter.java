@@ -45,6 +45,11 @@ public class Greeter extends javax.swing.JFrame {
         });
 
         runways.setText("Manage Runways");
+        runways.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                runwaysActionPerformed(evt);
+            }
+        });
 
         traffic.setText("Manage Traffic");
 
@@ -107,6 +112,13 @@ public class Greeter extends javax.swing.JFrame {
         ff.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_flightsActionPerformed
+
+    private void runwaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runwaysActionPerformed
+        // TODO add your handling code here:
+        RunwayForm rf = new RunwayForm();
+        rf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_runwaysActionPerformed
 
     /**
      * @param args the command line arguments
