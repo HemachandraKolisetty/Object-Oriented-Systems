@@ -52,6 +52,11 @@ public class Greeter extends javax.swing.JFrame {
         });
 
         traffic.setText("Manage Traffic");
+        traffic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trafficActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Exit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +124,13 @@ public class Greeter extends javax.swing.JFrame {
         rf.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_runwaysActionPerformed
+
+    private void trafficActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trafficActionPerformed
+        // TODO add your handling code here:
+        Traffic tf = new Traffic();
+        tf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_trafficActionPerformed
 
     /**
      * @param args the command line arguments
